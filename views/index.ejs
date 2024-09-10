@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900 ">
+        <!-- Form container -->
+        <div class="form p-10 text-white w-full"> <!-- Added flex-1 to allow this div to expand and take available space -->
+            <form action="/create" method="post">
+                <!-- Title input -->
+                <input type="text" class="block w-full py-2 px-5 bg-zinc-800 rounded-md outline-none" placeholder="Enter title" name ="title" />
+                <!-- Description textarea -->
+                <textarea class="block mt-2 w-full py-2 px-5 resize-none bg-zinc-800 rounded-md outline-none" placeholder="Enter description" name ="description"></textarea>
+                <!-- Submit button -->
+                <input type="submit" class=" py-2 px-3 rounded-md mt-2 bg-blue-600 cursor-pointer" value="Create Task" />
+            </form>
+        </div>
+        <!-- Tasks container -->
+        <div class="tasks p-10 flex gap-3  flex-wrap "> 
+            <% if (files.length > 0) { %>
+                 <% files.forEach(function(val) { %>
+ <!-- Tasks list -->
+ <div class="task rounded-md w-72 py-3 px-4 bg-zinc-800">
+    <h1 class="text-white text-3xl tracking-tighter">
+       <%= val %>
+    </h1>
+    <p>
+        the task is about the nasdkfasdmf jkasdnfansdf akjsdnfjasdnf jkasdnfand
+    </p>
+    <a class="text-blue-500 inline-block mt-3" href="">Read More.</a>
+</div>
+                 <% })  %>
+    
+          
+            <% } else { %>
+                <!-- No tasks available -->
+                <h1 class="text-zinc-600">Not yet task created</h1>
+            <% } %>
+            
+          
+        </div>
+        
+    </div>
+</body>
+</html>

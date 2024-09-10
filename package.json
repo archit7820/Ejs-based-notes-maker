@@ -1,0 +1,26 @@
+{
+  "name": "notesmaker",
+  "version": "1.0.0",
+  "description": "Web application node based for notes ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archit7820/Ejs-based-notes-maker.git"
+  },
+  "author": "Archit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archit7820/Ejs-based-notes-maker/issues"
+  },
+  "homepage": "https://github.com/archit7820/Ejs-based-notes-maker#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.20.0"
+  }
+}
